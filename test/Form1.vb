@@ -12,7 +12,7 @@ Public Class Form1
     Private Sub startgame_Click(sender As Object, e As EventArgs) Handles startgame.Click
         Dim haveFile = Dir(Application.StartupPath + "\ShipgirlsVSSirens\SVS.exe")
         If haveFile = "SVS.exe" Then
-            Shell("cmd /c start " + Application.StartupPath + "\ShipgirlsVSSirens\SVS.exe")
+            Shell("cmd /c cd " + Application.StartupPath + "\ShipgirlsVSSirens\ && start SVS.exe")
         Else
             MsgBox("诶呀！您好像没有把启动器放在游戏文件夹的同级目录下呢" & Chr(13) & "而且应该在压缩包中直接解压的话启动器是不会不在游戏文件夹的同级目录下的哦", vbOK, "发生错误啦！")
         End If
